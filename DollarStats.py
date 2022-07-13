@@ -14,6 +14,7 @@ while running:
     if int(time.strftime('%S')) == 0:
         while running:
             minute = int(time.strftime('%M'))
+            # If pass 1 minute after starting the program stops
             if minute - minute_start >= 2:
                 print('stop')
                 running = False
@@ -37,9 +38,3 @@ ws['E1'] = max(high_value)
 
 # Save in Excel document
 wd.save('DollarStats.xlsx')
-
-
-
-
-
-
